@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+     <!--css file link-->
+     <link rel="stylesheet" href="style.css">
+    <!--Tailwind Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Lora&family=Nunito:wght@800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=K2D:wght@300&family=Lora&family=Montserrat:wght@300&family=Nunito:wght@800&display=swap"
+        rel="stylesheet">
+  
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="bg-white ">
+        <div class="max-w-[95rem] lg:px-6 ">
+            <div class="flex justify-between lg:">
+
+                <div class="">
+                    <!-- Website Logo -->
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <img src="Images/TTS_logo.webp" alt="Logo" class=" h-[5rem] md:h-[10rem] w-[full]">
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1 gap-10 testFont uppercase ">
+                    <a href="Home.html" class="py-4 px-2 text-[#2D4985] text-[20px]">Home</a>
+                    <a href="Shop.html"
+                        class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985]  transition duration-300">Shop</a>
+                    <a href="story.html"
+                        class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985] transition duration-300">Our Story</a>
+                    <a href="contact.html"
+                        class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985] transition duration-300">Contact Us</a>
+                </div>
+
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="openNav()" class="outline-none mobile-menu-button px-4 ">
+                        <svg class=" w-8 h-8 text-[] hover:font-semibold  " x-show="!showMenu" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="Home.html">Home</a>
+                    <a href="Shop.html">Shop</a>
+                    <a href="story.html">Our Story</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+
+        </div>
+        <script>
+
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+
+        </script>
+    </nav>
+
+    <!-- 1st section/banner  -->
+
+    <div class="w-full">
+        <img src="Images/Banner!_Home.webp" alt="" class="">
+    </div>
+
+    <!-- 2nd section  -->
+    <div class="mx-8 lg:mx-24 mt-8">
+        <p class="text-3xl text-[#555] font-bold">OUR STORY</p>
+        <p class="text-sm lg:text-lg text-[#555] mt-4">Stardust is a studio by Sakshi Singhal where she brings a wide variety of holistic products including crystals, cleansers, bathing salts and much more. Sakshi Singhal is a famous Tarot card reader and an astrologer. After having an experience of more than 10 years and working with clients of different genre, she finally decided to start this holistic studio where people can choose the kind of products that will be good for them without even taking any consultation.
+        <br> <br>
+        The benefits and usage of each product is mentioned to make it easy for the customer to choose the right kind of product suitable to their needs.
+
+        </p>
+    </div>
+<!--3rd section-->
+    <div class=" mt-4 flex flex-col items-center gap-1">
+    
+        <div class="lg:grid grid-cols-3 gap-8 mt-[2.3rem]">
+            <div class="col-span-1 bg-white w-[20rem] md:w-[23rem] lg:w-[25rem] px-4">
+                <img src="Images/home_section4_img1.webp" alt="" class="">
+                <div class="my-3 flex flex-col gap-4">
+                    <p class="text-[18px] testFont font-bold">Health Benefits Of Crystals</p>
+                   
+                    <p class="testFont text-[14px] mb-4">Healing crystals and stones have been used for thousands of years to
+                        promote physical, emotional, and spiritual healing. They are believed to...</p>
+                   
+                </div>
+            </div>
+            <div class="col-span-1  bg-white">
+                <div class="col-span-1 bg-white w-[20rem] md:w-[23rem] lg:w-[25rem] px-4">
+                    <img src="Images/home_section4_img2.webp" alt="" class="">
+                    <div class="my-3 flex flex-col gap-4">
+                        <p class="text-[18px] testFont font-bold">Health Benefits Of Crystals</p>
+                        <p class="testFont text-[14px] mb-4">Healing crystals and stones have been used for thousands of
+                            years to promote physical, emotional, and spiritual healing. They are believed to...</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 bg-white">
+                <div class="col-span-1 bg-white w-[20rem] md:w-[23rem] lg:w-[25rem] px-4">
+                    <img src="Images/home_section4_img3.webp" alt="" class="">
+                    <div class="my-3 flex flex-col gap-4">
+                        <p class="text-[18px] testFont font-bold">Health Benefits Of Crystals</p>
+                   
+                      
+                        <p class="testFont text-[14px] mb-4">Healing crystals and stones have been used for thousands of
+                            years to promote physical, emotional, and spiritual healing. They are believed to...</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 5th section  -->
+
+    <!-- 6th section  -->
+
+    <div class=" mt-[2rem] py-[4rem] flex flex-col items-center gap-1">
+        <p class="testFont font-bold text-[14px]">WHAT DO OUR CUSTOMERS SAY ABOUT US</p>
+         <p class="testFont1 uppercase text-[30px] font-semibold text-[#555555]">Happy customers</p>
+       
+        <div class="lg:grid grid-cols-2 gap-8 mt-[2.3rem] mx-[2rem] md:mx-[3rem] lg:mx-[5rem]">
+            <div class="col-span-1 flex flex-col bg-white px-[2rem] py-[2rem] shadow-lg ">
+                <div class="flex flex-row gap-5 items-center">
+                    <img src="Images/Home_peopleIcon.webp" alt="" class="h-[7rem] w-[7rem]">
+                    <div class="testFont ">
+                        <p class="font-bold text-lg">Mrs. Jaya Verma</p>
+                        <p class="text-sm text-[#999]">Housewife</p>
+                    </div>
+                </div>
+                <p class="italic testFont mt-[3rem]">I am very happy and satisfied with your all products.I am your
+                    customer since 2 years and I have bought many products from you and every stone's quality is
+                    original....I am very happy and satisfied with all my purchases from you. Thank you so much ❤️🌷🌟
+                </p>
+            </div>
+
+            <div class="col-span-1 flex flex-col bg-white px-[2rem] py-[2rem] shadow-lg lg:mt-0 md:mt-0 mt-2">
+                <div class="flex flex-row gap-5 items-center">
+                    <img src="Images/Home_peopleIcon.webp" alt="" class="h-[7rem] w-[7rem]">
+                    <div class="testFont ">
+                        <p class="font-bold text-lg">Mrs. Raveena </p>
+                        <p class="text-sm text-[#999]">Housewife</p>
+                    </div>
+                </div>
+                <p class="italic testFont mt-[3rem]">Thank you for the well packed timely order sent. The products
+                    bought until now are of very good quality and genuine. I will surely recommend to by any Reiki Or
+                    Other Holistic products from this store.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+    <div class="md:flex flex-row bg-black text-white justify-between w-full px-2 md:px-[8rem] lg:px-[9rem] pt-[4rem] ">
+        <div class="">
+            <p class="testFont text-sm font-bold">STAY UP TO DATE ON ALL OUR PRODUCTS</p>
+            <div class="flex pt-4">
+                <input type="email" placeholder="Enter your email"
+                    class="bg-[rgba(255,255,255,.2);] testFont text-sm border-none h-[39px] w-[396px]  px-[15px] py-[9px] ">
+                <div class="bg-white flex items-center justify-center w-16 h-10"><img src="Images/mail.png" alt=""
+                        class=" h-6 w-6"></div>
+            </div>
+        </div>
+        <div>
+            <p class="testFont text-sm font-bold">CONNECT</p>
+            <div class="flex gap-[1px] pt-4">
+                <div class="bg-white h-10 w-10 flex items-center justify-center"><img
+                        src="Images/facebook-app-symbol.png" alt="" class="h-4 w-4"></div>
+                <div class="bg-white h-10 w-10 flex items-center justify-center"><img src="Images/youtube.png"
+                        alt="" class="h-4 w-4"></div>
+                <div class="bg-white h-10 w-10 flex items-center justify-center"><img src="Images/instagram.png"
+                        alt="" class="h-4 w-4"></div>
+            </div>
+        </div>
+    </div>
+
+        <div class="bg-black text-white md:h-[20rem] px-6 py-[4rem] md:px-0 md:py-0 md:grid grid-cols-4 justify-items-center testFont ">
+            <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                <div class="">
+                    <h1 class="font-bold text-sm">COMPANY</h1>
+                </div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <a href="story.html" class="">
+                        <p class="text-sm">Our Story</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Blogs</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Testimonials</p>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                <div class="">
+                    <h1 class="font-bold text-sm uppercase">Information</h1>
+                </div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <a href="contact.html" class="">
+                        <p class="text-sm">Contact Us</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">FAQs</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Returns and Refunds</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Terms Of Services</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-span-1 mt-[3rem]  md:mt-[4.5rem] tracking-wide">
+                <div class="">
+                    <h1 class="font-bold text-sm uppercase">Category</h1>
+                </div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <a href="Shop.html" class="">
+                        <p class="text-sm">Shop</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">By Intention</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">By Healing</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">By Chakra</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                <div class="">
+                    <h1 class="font-bold text-sm">GET IN TOUCH</h1>
+                </div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <a href="" class="">
+                        <p class="text-sm">Phone No. +91 9990-0933-99</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Address - Golf course road, Gurgaon</p>
+                    </a>
+                    <a href="" class="">
+                        <p class="text-sm">Email - team.tarotwithsakshi@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black text-white testFont text-sm">
+           <div class="flex items-center justify-center  gap-5"><p class="">Privacy Policy</p>
+            <div class="bg-gray-100 h-4 w-[1px]"></div>
+            <p class="">Terms Of Use</p>
+            <div class="bg-gray-200 h-4 w-[1px]"></div>
+            <p class="">Shipping And Returns</p>
+        </div> 
+        <p class="flex items-center justify-center mt-4 tracking-wider pb-[2rem]">Copyright 2022 By The Stardust Studio. All Right Reserved.</p>
+        </div>
+    </footer>
+             
+        
+        
+</body>
+
+</html>

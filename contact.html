@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+     <!--css file link-->
+     <link rel="stylesheet" href="style.css">
       <!--Tailwind Link-->
       <script src="https://cdn.tailwindcss.com"></script>
       <!--Fa Fa Link-->
@@ -12,72 +14,83 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
-<style>
-    .accordion__header {
-    padding: 1em;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-  }
-  .accordion__header > * {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-  }
-  .accordion__header.is-active {
-    color: black;
-  }
-  
-  .accordion__toggle {
-    content: "+";
-    color: #2D4985;
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: bolder;
-    display: block;
-    position: relative;
-    flex-shrink: 1;
-    border-radius: 2px;
-  }
-  
-  .accordion__toggle::before {
-    content: "+";
-    width: 3px;
-    height: 13px;
-    display: block;
-    /* background-color: #222; */
-    position: absolute;
-    top: -5px;
-    left: 5px;
-    border-radius: 2px;
-  }
-  
-  .is-active {
-    border: none;
-  }
-  
-  .is-active .accordion__toggle {
-    background-color: #2D4985;
-  }
-  .is-active .accordion__toggle::before {
-    display: none;
-  }
-  .accordion__body {
-    display: none;
-    padding: 1em;
-  
-      border-left: 0px;
-      border-right: 0px;
-    border-top: 0;
-  }
-  .accordion__body.is-active {
-    display: block;
-  }</style>
+
 <body>
-   
-    <p class="text-3xl lg:text-5xl font-bold mx-4 lg:mx-8">CONTACT US</p>
+
+  <!--navbar-->
+  <nav class="bg-white ">
+    <div class="max-w-[95rem] lg:px-6 ">
+        <div class="flex justify-between lg:">
+
+            <div class="">
+                <!-- Website Logo -->
+                <a href="#" class="flex items-center py-4 px-2">
+                    <img src="Images/TTS_logo.webp" alt="Logo" class=" h-[5rem] md:h-[10rem] w-[full]">
+                </a>
+            </div>
+            <!-- Primary Navbar items -->
+            <div class="hidden md:flex items-center space-x-1 gap-10 testFont uppercase ">
+                <a href="Home.html" class="py-4 px-2 text-[#2D4985] text-[20px]">Home</a>
+                <a href="Shop.html"
+                    class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985]  transition duration-300">Shop</a>
+                <a href="story.html"
+                    class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985] transition duration-300">Our Story</a>
+                <a href="contact.html"
+                    class="py-4 px-2 text-[#2D4985] text-[20px] hover:border-b-[2px]-[#2D4985] transition duration-300">Contact Us</a>
+            </div>
+
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button onclick="openNav()" class="outline-none mobile-menu-button px-4 ">
+                    <svg class=" w-8 h-8 text-[] hover:font-semibold  " x-show="!showMenu" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="Home.html">Home</a>
+                <a href="Shop.html">Shop</a>
+                <a href="story.html">Our Story</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+    </script>
+</nav>
+    <!-- 1st section/banner  -->
+
+    <div class="w-full">
+      <img src="Images/Banner!_Home.webp" alt="" class="">
+  </div>
+  
+    <p class="text-[#555] text-3xl lg:text-5xl font-bold mx-4 lg:mx-[9rem] mt-8">CONTACT US</p>
 
     
 <div class=" justify-items-stretch my-12 mx-auto px-4 md:px-12">
@@ -85,7 +98,7 @@
         <!-- Card(1) -->
         <div class="my-1 mx-8 px-1 w-full rounded-lg md:w-1/2 lg:px-4 lg:w-1/4">
           <!--ADDRESS-->
-            <div class="overflow-hidden rounded-lg bg-slate-300 h-48">
+            <div class="overflow-hidden rounded-lg bg-[#bbf7d0] h-48">
               <div class="text-black mt-2 mb-2 lg:mb-2 lg:mt-8 lg:text-lg text-md text-center">
                  <i class="fa fa-address-card text-5xl"></i>
                   <p class="mt-4 font-bold">ADDRESS</p>
@@ -100,7 +113,7 @@
       <!-- Card(2) -->
       <div class="my-1 mx-8 px-1 w-full rounded-lg md:w-1/2 lg:px-4 lg:w-1/4">
         <!--ADDRESS-->
-          <div class="overflow-hidden rounded-lg bg-slate-300 h-48">
+          <div class="overflow-hidden rounded-lg bg-[#bbf7d0] h-48">
             <div class="text-black mt-2 mb-2 lg:mb-2 lg:mt-8 lg:text-lg text-md text-center">
                <i class="fa fa-phone text-5xl"></i>
                <p class="mt-4 font-bold">PHONES</p>
@@ -115,7 +128,7 @@
   <!-- Card(3) -->
   <div class="my-1 mx-8 px-1 w-full rounded-lg md:w-1/2 lg:px-4 lg:w-1/4">
     <!--ADDRESS-->
-      <div class="overflow-hidden rounded-lg bg-slate-300 h-48">
+      <div class="overflow-hidden rounded-lg bg-[#bbf7d0] h-48">
         <div class="text-black mt-2 mb-2 lg:mb-2 lg:mt-8 lg:text-lg text-md text-center">
            <i class="fa fa-envelope text-5xl"></i>
            <p class="mt-4 font-bold"> EMAIL</p>
@@ -129,9 +142,9 @@
     </div>
   </div>
     
-  <div class="md:flex flex-row md:pl-5 mt-12 lg:mt-12 mx-4 lg:mx-8">
+  <div class="md:flex flex-row md:pl-5 mt-12 lg:mt-12 mx-4 lg:mx-24  mb-12">
     <div class="container lg:w-1/2 lg:px-12">
-        <p class="text-3xl font-bold">FAQ</p>
+        <p class="text-[#555] text-3xl font-bold">FAQ</p>
         <div class="accordion">
           <div
             class="accordion__header is-activ mx-4 bg-white shadow-lg rounded-lg rounded-b-none -mb-4 py-8"
@@ -232,12 +245,12 @@
       
       class="w-full mt-8 md:text-left lg:w-1/2 lg:mx-4 lg:mt-0 md:mt-0 sm:mt-0"
     >
-    <p class="text-3xl font-bold">Contact Form</p>
+    <p class="text-[#555] text-3xl font-bold lg:mx-4 lg:px-[2rem]">Contact Form</p>
       <div
-        class="h-auto space-y-2 lg:mx-12 bg-indigo-500 pt-4 mx-4 rounded-lg shadow px-4 mt-4"
+        class="h-auto space-y-2 lg:mx-12 bg-slate-500 pt-4 mx-4 rounded-lg shadow px-4 mt-4"
       >
       
-        <form class="space-y-6 bg-indigo-500" action="#" method="post">
+        <form class="space-y-6 bg-slate-500" action="#" method="post">
           <div>
             <label
               for="name"
@@ -316,6 +329,122 @@
     </div>
 
   </div>
+
+  <!--footer-->
+    <!-- footer  -->
+    <footer>
+      <div class="md:flex flex-row bg-black text-white justify-between w-full px-2 md:px-[8rem] lg:px-[9rem] pt-[4rem] ">
+          <div class="">
+              <p class="testFont text-sm font-bold">STAY UP TO DATE ON ALL OUR PRODUCTS</p>
+              <div class="flex pt-4">
+                  <input type="email" placeholder="Enter your email"
+                      class="bg-[rgba(255,255,255,.2);] testFont text-sm border-none h-[39px] w-[396px]  px-[15px] py-[9px] ">
+                  <div class="bg-white flex items-center justify-center w-16 h-10"><img src="Images/mail.png" alt=""
+                          class=" h-6 w-6"></div>
+              </div>
+          </div>
+          <div>
+              <p class="testFont text-sm font-bold">CONNECT</p>
+              <div class="flex gap-[1px] pt-4">
+                  <div class="bg-white h-10 w-10 flex items-center justify-center"><img
+                          src="Images/facebook-app-symbol.png" alt="" class="h-4 w-4"></div>
+                  <div class="bg-white h-10 w-10 flex items-center justify-center"><img src="Images/youtube.png"
+                          alt="" class="h-4 w-4"></div>
+                  <div class="bg-white h-10 w-10 flex items-center justify-center"><img src="Images/instagram.png"
+                          alt="" class="h-4 w-4"></div>
+              </div>
+          </div>
+      </div>
+  
+          <div class="bg-black text-white md:h-[20rem] px-6 py-[4rem] md:px-0 md:py-0 md:grid grid-cols-4 justify-items-center testFont ">
+              <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                  <div class="">
+                      <h1 class="font-bold text-sm">COMPANY</h1>
+                  </div>
+                  <div class="flex flex-col gap-2 mt-4">
+                      <a href="story.html" class="">
+                          <p class="text-sm">Our Story</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Blogs</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Testimonials</p>
+                      </a>
+                      
+                  </div>
+              </div>
+              <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                  <div class="">
+                      <h1 class="font-bold text-sm uppercase">Information</h1>
+                  </div>
+                  <div class="flex flex-col gap-2 mt-4">
+                      <a href="contact.html" class="">
+                          <p class="text-sm">Contact Us</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">FAQs</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Returns and Refunds</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Terms Of Services</p>
+                      </a>
+                  </div>
+              </div>
+  
+              <div class="col-span-1 mt-[3rem]  md:mt-[4.5rem] tracking-wide">
+                  <div class="">
+                      <h1 class="font-bold text-sm uppercase">Category</h1>
+                  </div>
+                  <div class="flex flex-col gap-2 mt-4">
+                      <a href="Shop.html" class="">
+                          <p class="text-sm">Shop</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">By Intention</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">By Healing</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">By Chakra</p>
+                      </a>
+                  </div>
+              </div>
+  
+              <div class="col-span-1  mt-[3rem] md:mt-[4.5rem] tracking-wide">
+                  <div class="">
+                      <h1 class="font-bold text-sm">GET IN TOUCH</h1>
+                  </div>
+                  <div class="flex flex-col gap-2 mt-4">
+                      <a href="" class="">
+                          <p class="text-sm">Phone No. +91 9990-0933-99</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Address - Golf course road, Gurgaon</p>
+                      </a>
+                      <a href="" class="">
+                          <p class="text-sm">Email - team.tarotwithsakshi@gmail.com</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="bg-black text-white testFont text-sm">
+             <div class="flex items-center justify-center  gap-5"><p class="">Privacy Policy</p>
+              <div class="bg-gray-100 h-4 w-[1px]"></div>
+              <p class="">Terms Of Use</p>
+              <div class="bg-gray-200 h-4 w-[1px]"></div>
+              <p class="">Shipping And Returns</p>
+          </div> 
+          <p class="flex items-center justify-center mt-4 tracking-wider pb-[2rem]">Copyright 2022 By The Stardust Studio. All Right Reserved.</p>
+          </div>
+      </footer>
+
+           
+  
 </body>
 <script>
     // Accordion
